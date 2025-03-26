@@ -319,7 +319,6 @@ input[type="radio"]:checked::before {
 .box {
   border: 0.9px solid #ddd;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
   position: relative;
 }
 
