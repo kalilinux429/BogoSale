@@ -7,15 +7,36 @@ body {
   align-items: center;
 }
 
+/* //bogo banner */
+
+
+.bogo-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 19px;
+}
+
+.line {
+width: 102px;
+  height: 1px;
+  background-color:  #C8C8C8;
+}
+
+.bogo-text {
+font-size: 20px;
+  font-weight: bold;
+  color: #ff5a7d;
+}
+
 .box,
 .cart-container,
 .unit-option,
 .unit-container {
   width: 347px;
-  border-radius: 8px;
 }
 
-/* Box Component */
 .box {
   border: 1px solid #ddd;
   padding: 15px;
@@ -25,20 +46,69 @@ body {
 }
 
 .box.open {
-  border-color: #ff99a0;
+  border: 2px solid #FF6B82;
   background-color: #fff9fa;
 }
 
 .ribbon {
-  position: absolute;
-  top: -10px;
-  right: 9px;
-  background: #ff6680;
+  background: #ff5f7e;
   color: white;
-  padding: 5px 10px;
-  font-size: 12px;
   font-weight: bold;
-  border-radius: 5px;
+  font-size: 18px;
+  padding: 12px 35px;
+  border-radius: 0 0 8px 8px; /* Rounded bottom corners */
+  display: inline-block;
+  position: relative;
+  text-transform: uppercase;
+  z-index: 2;
+  width: 119px;
+  height: 26px;
+  transform: translateY(-29px) translateX(163px);
+}
+
+/* Creating the Upward Slanted Notches */
+.ribbon::before,
+.ribbon::after {
+  content: "";
+  position: absolute;
+
+  width: 15px;
+  height: 12px;
+  background: #ff5f7e;
+  z-index: -1;
+
+  left: 187px;
+  top: 1px;
+}
+
+/* Left Notch */
+.ribbon::before {
+  clip-path: polygon(0 0, 100% 100%, 0 100%);
+  transform: rotate(-90deg);
+  left: -13px;
+
+  top: 01px;
+}
+
+/* Right Notch */
+.ribbon::after {
+  right: -20px;
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  transform: rotate(90deg);
+}
+
+/* Darker Shadow Effect for Depth */
+.ribbon-shadow::before,
+.ribbon-shadow::after {
+  background: #d95367; /* Slightly darker shade */
+}
+.ribbon-shadow {
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .details {
@@ -88,6 +158,17 @@ select {
   left: 100px;
 }
 
+.secondbadge {
+  background: #ff4d6d;
+  color: white;
+  font-size: 12px;
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-weight: 400;
+  position: absolute;
+  top: 15px;
+  left: 60pxpx;
+}
 /* Pricing */
 .price {
   font-weight: bold;
@@ -144,6 +225,13 @@ select {
   justify-content: space-between;
 }
 
+.pricingsecond-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -25px;
+}
+
 /* Radio Selection */
 .left-section {
   display: flex;
@@ -197,6 +285,9 @@ input[type="radio"]:checked::before {
   display: flex;
   flex-direction: column;
 }
+.unit2-title {
+  margin-left: 10px;
+}
 
 .unit-title {
   font-size: 14px;
@@ -226,7 +317,25 @@ input[type="radio"]:checked::before {
 }
 
 .box {
-  border: 2px solid #ddd;
+  border: 0.9px solid #ddd;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  position: relative;
 }
+
+.secondbadge {
+  background: #ff4d6d;
+  color: white;
+  font-size: 12px;
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-weight: 400;
+  position: absolute;
+  top: 15px;
+  top: 71px;
+  left: 98px;
+  top: 47px;
+}
+
+
+
