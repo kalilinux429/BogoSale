@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box,
+.cart-container,
+.unit-option,
+.unit-container {
+  width: 347px;
+  border-radius: 8px;
+}
+
+/* Box Component */
+.box {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 19px 0;
+  position: relative;
+  cursor: pointer;
+}
+
+.box.open {
+  border-color: #ff99a0;
+  background-color: #fff9fa;
+}
+
+.ribbon {
+  position: absolute;
+  top: -10px;
+  right: 9px;
+  background: #ff6680;
+  color: white;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.details {
+  display: none;
+  padding-top: 10px;
+  margin-left: 49px;
+}
+
+.box.open .details {
+  display: block;
+}
+
+/* Select Element */
+select {
+  width: 65px;
+  height: 26px;
+  border: 1px solid #d9d9d9;
+  margin-left: 7px;
+}
+
+/* Cart Container */
+.cart-container {
+  background: #fff;
+  padding: 20px;
+}
+
+/* Unit Option */
+.unit-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  padding: 10px;
+  position: relative;
+}
+
+/* Discount Badge */
+.discount-badge {
+  background: #ff4d6d;
+  color: white;
+  font-size: 12px;
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-weight: 400;
+  position: absolute;
+  top: 15px;
+  left: 100px;
+}
+
+/* Pricing */
+.price {
+  font-weight: bold;
+}
+
+.original-price,
+.old-price {
+  text-decoration: line-through;
+  color: gray;
+  font-size: 12px;
+}
+
+/* Free Delivery */
+.free-delivery {
+  color: #ff5a7d;
+  font-weight: bold;
+}
+
+.free-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Add to Cart Button */
+.add-to-cart {
+  background: #ff5a7d;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  border-radius: 6px;
+  margin-top: 20px;
+  cursor: pointer;
+  width: 347px;
+  font-weight: 500;
+}
+
+.add-to-cart .plus {
+  margin-right: 11px;
+}
+
+/* Footer */
+.powered {
+  font-size: 12px;
+  color: gray;
+  text-align: right;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+/* Pricing Card */
+.pricing-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Radio Selection */
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+/* radio button */
+.rbtn {
+  width: 14px;
+  height: 14px;
+  margin-right: 13px;
+}
+
+input[type="radio"] {
+  appearance: none;
+  /* Remove default styling */
+  width: 14px;
+  height: 14px;
+  border: 2px solid gray;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  background-color: white;
+  /* Outer white background */
+}
+
+input[type="radio"]:checked {
+  border: 3px solid white;
+  /* White outer ring */
+  background-color: #ff5a7d;
+  /* Inner pink fill */
+  box-shadow: 0 0 0 2px #ff5a7d;
+  /* Adds an outer pink ring */
+}
+
+input[type="radio"]:checked::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  background-color: #ff5a7d;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Unit Information */
+.unit-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.unit-title {
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.subtext {
+  font-size: 12px;
+  color: #000000;
+  margin-top: 3px;
+}
+
+/* Price Info */
+.price-info {
+  text-align: right;
+}
+
+.current-price {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.old-price {
+  margin-right: 20px;
+}
+
+.box {
+  border: 2px solid #ddd;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
